@@ -1,0 +1,3 @@
+# Project exclude paths
+/api-service/api/node_modules/
+/client-service/client/node_modules/

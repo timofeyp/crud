@@ -1,0 +1,7 @@
+{
+  "jwt": {
+    "accessExpiresIn": "10s",
+    "refreshExpiresIn": "7 days",
+    "tokenSecret": "GFhdc63jkzdlcvb44"
+  }
+}

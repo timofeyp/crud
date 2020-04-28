@@ -1,0 +1,25 @@
+version: '2'
+services:
+  api:
+    build: ./api-service
+    ports:
+     - "4000:4000"
+    depends_on:
+     - db
+    environment:
+     - NODE_PATH=./
+     - DATABASE_HOST=db
+    volumes:
+     - ./api-service/api:/app/api
+  client:
+    build: ./client-service
+    ports:
+     - "3000:3000"
+    depends_on:
+     - api
+    volumes:
+     - ./client-service/client:/app/client
+    stdin_open: true
+    tty: true
+  db:
+    build: ./database-service
